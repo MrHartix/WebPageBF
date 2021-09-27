@@ -28,9 +28,15 @@
             if (r==true)
                 { document.write("Nacisnąłeś OK!"); }
             else
-                { document.write("Nacisnąłeś Cancel!");
+                { document.write("Nacisnąłeś Cancel!"); }
         }
-}
+        function show_prompt() {
+            var name=prompt("Napisz imię","Imię Nazwisko");
+            if (name!=null && name!="")
+            {
+                document.write("Witaj " + name + "! jak się masz?");
+            }
+        }
     </script>
 </head>
 <body>
@@ -41,7 +47,7 @@
         <input type="button" name="przycisk" value="Filipowicz zadanie 3" onclick="WinOpen_filipowicz3()">
         <input type="button" name="przycisk" value="Filipowicz zadanie 4" onclick="show_alert()">
         <input type="button" name="przycisk" value="Filipowicz zadanie 5" onclick="show_confirm()">
-        <input type="button" name="przycisk" value="Filipowicz zadanie 6" onclick="WinOpen_filipowicz6()">
+        <input type="button" name="przycisk" value="Filipowicz zadanie 6" onclick="show_prompt()">
         <input type="button" name="przycisk" value="Filipowicz zadanie 7" onclick="WinOpen_filipowicz7()">
     </form>
 </body>
