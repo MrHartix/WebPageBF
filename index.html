@@ -37,6 +37,15 @@
                 document.write("Witaj " + name + "! jak się masz?");
             }
         }
+        function prompt_box() {
+            var liczba1=prompt("liczba1=","");
+            var liczba2=prompt("liczba2=","");
+            var suma;
+            var a=parseFloat(liczba1);
+            var b=parseFloat(liczba2);
+            suma=a+b;
+            document.write("suma="+a+" + "+b+" = "+suma+"<br>");
+        }
     </script>
 </head>
 <body>
@@ -48,7 +57,7 @@
         <input type="button" name="przycisk" value="Filipowicz zadanie 4" onclick="show_alert()">
         <input type="button" name="przycisk" value="Filipowicz zadanie 5" onclick="show_confirm()">
         <input type="button" name="przycisk" value="Filipowicz zadanie 6" onclick="show_prompt()">
-        <input type="button" name="przycisk" value="Filipowicz zadanie 7" onclick="WinOpen_filipowicz7()">
+        <input type="button" name="przycisk" value="Filipowicz zadanie 7" onclick="prompt_box()">
     </form>
 </body>
 </html>
