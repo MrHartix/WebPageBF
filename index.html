@@ -1,6 +1,32 @@
 <html>
 <head>
     <title>Storna z Cwiczeniami</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+            .button:hover {
+                background-color: #3e8e41
+            }
+
+            .button:active {
+                background-color: #3e8e41;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+    </style>
     <script language="JavaScript">
         function WinOpen_filipowicz1() {
             window.open("zadanie1.html", "zadanie 1", "toolbar=no,directories=no,menubar=no,height=700,width=500,top=300,left=500");
@@ -15,27 +41,24 @@
             alert("Uwaga! Alert box z zadania 4.");
         }
         function show_confirm() {
-            var r=confirm("Naciśnij klawisz");
-            if (r==true)
-                { document.write("Nacisnąłeś OK!"); }
-            else
-                { document.write("Nacisnąłeś Cancel!"); }
+            var r = confirm("Naciśnij klawisz");
+            if (r == true) { document.write("Nacisnąłeś OK!"); }
+            else { document.write("Nacisnąłeś Cancel!"); }
         }
         function show_prompt() {
-            var name=prompt("Napisz imię","Imię Nazwisko");
-            if (name!=null && name!="")
-            {
+            var name = prompt("Napisz imię", "Imię Nazwisko");
+            if (name != null && name != "") {
                 document.write("Witaj " + name + "! jak się masz?");
             }
         }
         function prompt_box() {
-            var liczba1=prompt("liczba1=","");
-            var liczba2=prompt("liczba2=","");
+            var liczba1 = prompt("liczba1=", "");
+            var liczba2 = prompt("liczba2=", "");
             var suma;
-            var a=parseFloat(liczba1);
-            var b=parseFloat(liczba2);
-            suma=a+b;
-            document.write("suma="+a+" + "+b+" = "+suma+"<br>");
+            var a = parseFloat(liczba1);
+            var b = parseFloat(liczba2);
+            suma = a + b;
+            document.write("suma=" + a + " + " + b + " = " + suma + "<br>");
         }
         function WinOpen_filipowicz8() {
             window.open("zadanie8.html", "zadanie 8", "toolbar=no,directories=no,menubar=no,height=350,width=900,top=300,left=500");
@@ -60,21 +83,23 @@
 <body>
     <h1>Filipowicz</h1>
     <form>
-        <input type="button" name="przycisk" value="zadanie 1" onclick="WinOpen_filipowicz1()">
-        <input type="button" name="przycisk" value="zadanie 2" onclick="WinOpen_filipowicz2()">
+        <input type="button" class="button" name="przycisk" value="zadanie 1" onclick="WinOpen_filipowicz1()">
+        <input type="button" class="button" name="przycisk" value="zadanie 2" onclick="WinOpen_filipowicz2()">
         <br>
-        <input type="button" name="przycisk" value="Filipowicz zadanie 3" onclick="WinOpen_filipowicz3()">
-        <input type="button" name="przycisk" value="Filipowicz zadanie 4" onclick="show_alert()">
-        <input type="button" name="przycisk" value="Filipowicz zadanie 5" onclick="show_confirm()">
-        <input type="button" name="przycisk" value="Filipowicz zadanie 6" onclick="show_prompt()">
-        <input type="button" name="przycisk" value="Filipowicz zadanie 7" onclick="prompt_box()">
         <br>
-        <input type="button" name="przycisk" value="Filipowicz zadanie 8" onclick="WinOpen_filipowicz8()">
-        <input type="button" name="przycisk" value="Filipowicz zadanie 9" onclick="WinOpen_filipowicz9()">
-        <input type="button" name="przycisk" value="Filipowicz zadanie 10" onclick="WinOpen_filipowicz10()">
-        <input type="button" name="przycisk" value="Filipowicz zadanie 11" onclick="WinOpen_filipowicz11()">
-        <input type="button" name="przycisk" value="Filipowicz zadanie 12" onclick="WinOpen_filipowicz12()">
-        <input type="button" name="przycisk" value="Filipowicz zadanie 13" onclick="WinOpen_filipowicz13()">
+        <input type="button" class="button" name="przycisk" value="Filipowicz zadanie 3" onclick="WinOpen_filipowicz3()">
+        <input type="button" class="button" name="przycisk" value="Filipowicz zadanie 4" onclick="show_alert()">
+        <input type="button" class="button" name="przycisk" value="Filipowicz zadanie 5" onclick="show_confirm()">
+        <input type="button" class="button" name="przycisk" value="Filipowicz zadanie 6" onclick="show_prompt()">
+        <input type="button" class="button" name="przycisk" value="Filipowicz zadanie 7" onclick="prompt_box()">
+        <br>
+        <br>
+        <input type="button" class="button" name="przycisk" value="Filipowicz zadanie 8" onclick="WinOpen_filipowicz8()">
+        <input type="button" class="button" name="przycisk" value="Filipowicz zadanie 9" onclick="WinOpen_filipowicz9()">
+        <input type="button" class="button" name="przycisk" value="Filipowicz zadanie 10" onclick="WinOpen_filipowicz10()">
+        <input type="button" class="button" name="przycisk" value="Filipowicz zadanie 11" onclick="WinOpen_filipowicz11()">
+        <input type="button" class="button" name="przycisk" value="Filipowicz zadanie 12" onclick="WinOpen_filipowicz12()">
+        <input type="button" class="button" name="przycisk" value="Filipowicz zadanie 13" onclick="WinOpen_filipowicz13()">
     </form>
 </body>
 </html>
