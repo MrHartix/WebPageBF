@@ -6,9 +6,9 @@
             X_liczba=parseFloat(X)
             D_liczba=parseFloat(D)
             wynik=+Math.sqrt(Math.pow(X_liczba,2)*Math.pow(D_liczba,2))+"";
-            document.getElementsByName('obj')[0].value=V_wynik.toFixed(2); /* na dokument */
-            alert("V="+V_wynik.toFixed(2)+" cm^3"); /*do okna Alert */
-            pokaz1.innerHTML="V="+V_wynik.toFixed(2)+" cm^3"+"<br>"; /* do tabeli */
+            document.getElementsByName('obj')[0].value=wynik.toFixed(2); /* na dokument */
+            alert("wynik ="+wynik.toFixed(2)+" cm^3"); /*do okna Alert */
+            pokaz1.innerHTML="V="+wynik.toFixed(2)+" cm^3"+"<br>"; /* do tabeli */
         }
         function Alfa(X,D) {
             r_liczba=parseFloat(r)
@@ -35,7 +35,7 @@
         <input size="6" name="X">
         <br>
         <br>
-        <input TYPE="submit" Value="oblicz" >
+        <input type="submit" Value="oblicz" >
         <br>
         <br>
         Drabina = 
