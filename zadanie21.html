@@ -5,10 +5,11 @@
         function Drabina(X,D) {
             X_liczba=parseFloat(X)
             D_liczba=parseFloat(D)
-            wynik=+Math.sqrt(Math.pow(X_liczba,2)*Math.pow(D_liczba,2))+"";
-            document.getElementsByName('obj')[0].value=wynik.toFixed(2); /* na dokument */
-            alert("wynik ="+wynik.toFixed(2)+" cm^3"); /*do okna Alert */
-            pokaz1.innerHTML="V="+wynik.toFixed(2)+" cm^3"+"<br>"; /* do tabeli */
+            var drabina=parseFloat();
+            var alfa=parseFloat();
+            drabina = +Math.sqrt(Math.pow(X_liczba,2)*Math.pow(D_liczba,2))+"";
+            alfa= +Math.tan(D/drabina)*180/Math.PI+"";
+            document.write("Drabina =  " + drabina + "<br> Alfa = "+alfa+"<br>");
         }
         function Alfa(X,D) {
             r_liczba=parseFloat(r)
