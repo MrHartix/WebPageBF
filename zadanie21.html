@@ -2,6 +2,22 @@
 <head>
     <title>Cwiczenie 15</title>
     <script language="JavaScript">
+        function Drabina(r,h) {
+            r_liczba=parseFloat(r)
+            h_liczba=parseFloat(h)
+            V_wynik=Math.PI*r_liczba*r_liczba*h_liczba
+            document.getElementsByName('obj')[0].value=V_wynik.toFixed(2); /* na dokument */
+            alert("V="+V_wynik.toFixed(2)+" cm^3"); /*do okna Alert */
+            pokaz1.innerHTML="V="+V_wynik.toFixed(2)+" cm^3"+"<br>"; /* do tabeli */
+        }
+        function Alfa(r,h) {
+            r_liczba=parseFloat(r)
+            h_liczba=parseFloat(h)
+            Pc_wynik=2*Math.PI*r_liczba*r_liczba+2*Math.PI*r_liczba*h_liczba
+            document.getElementsByName('pole')[0].value=Pc_wynik.toFixed(2);
+            alert("Pc="+Pc_wynik.toFixed(2)+" cm^2");
+            pokaz2.innerHTML="Pc="+Pc_wynik.toFixed(2)+"cm^2";
+        }
         function kod() {
             window.open("zadanie21_kod.html", "zadanie 21 - kod", "toolbar=no,directories=no,menubar=no,height=800,width=1700,top=150,left=200");
         }
@@ -12,20 +28,20 @@
         Obliczanie długości drabiny oraz kątu jej nachylenia
         <br>
         <br>
-        <form name="formularz" action="..." onsubmit="Drabina(this.promien.value,this.wysokosc.value); Alfa(this.promien.value,this.wysokosc.value);return false">
+        <form name="formularz" action="..." onsubmit="Drabina(this.promien.value,this.X.value); Alfa(this.promien.value,this.X.value);return false">
         Podaj D = 
-        <input size="6" name="promien">
+        <input size="6" name="D">
         Podaj X = 
-        <input size="6" name="wysokosc">
+        <input size="6" name="X">
         <br>
         <br>
         <input TYPE="submit" Value="oblicz" >
         <br>
         <br>
         Drabina = 
-        <input size="6" name="obj">
+        <input size="6" name="drabina">
         Alfa = 
-        <input size="6" name="pole">
+        <input size="6" name="alfa">
     </form>
     <br>
     <br>
