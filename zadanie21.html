@@ -1,54 +1,50 @@
-<html>
+﻿<html>
 <head>
-    <title>Cwiczenie 21</title>
+    <title>
+        Obliczenie pola oraz obwodu prostokąta.
+    </title>
     <script language="JavaScript">
-        function Drabina(X,D) {
-            X_liczba=parseFloat(X)
-            D_liczba=parseFloat(D)
-            var drabina=parseFloat();
-            var alfa=parseFloat();
-            drabina = +Math.sqrt(Math.pow(X_liczba,2)*Math.pow(D_liczba,2))+"";
-            alfa= +Math.tan(D/drabina)*180/Math.PI+"";
-            document.write("Drabina =  " + drabina + "<br> Alfa = "+alfa+"<br>");
+        function drabina_filipowicz(d_fil, x_fil) {
+            d_liczba = parseFloat(d_fil);
+            x_liczba = parseFloat(x_fil);
+            drabina_wynik = Math.sqrt(Math.pow(d_fil, 2) + Math.pow(x_fil, 2));
+            document.getElementsByName('a_dana_fil')[0].value = drabina_wynik.toFixed(2);
+            alert("drabina = " + drabina_wynik.toFixed(2) + " m");
+            wprowadz_drabina_fil.innerHTML = "pole = " + drabina_wynik.toFixed(2) + " m" + "<br>";
         }
-        function Alfa(X,D) {
-            r_liczba=parseFloat(r)
-            h_liczba=parseFloat(h)
-            Pc_wynik=2*Math.PI*r_liczba*r_liczba+2*Math.PI*r_liczba*h_liczba
-            document.getElementsByName('pole')[0].value=Pc_wynik.toFixed(2);
-            alert("Pc="+Pc_wynik.toFixed(2)+" cm^2");
-            pokaz2.innerHTML="Pc="+Pc_wynik.toFixed(2)+"cm^2";
-        }
-        function kod() {
-            window.open("zadanie21_kod.html", "zadanie 21 - kod", "toolbar=no,directories=no,menubar=no,height=800,width=1700,top=150,left=200");
+        function alfa_filipowicz(d_fil, x_fil) {
+            d_liczba = parseFloat(d_fil);
+            x_liczba = parseFloat(x_fil);
+            alfa_wynik = Math.atan(d_liczba / (Math.sqrt(Math.pow(d_fil, 2) + Math.pow(x_fil, 2)))) * (180 / Math.PI);
+            document.getElementsByName('b_dana_fil')[0].value = alfa_wynik.toFixed(0);
+            alert("kąt alfa = " + alfa_wynik.toFixed(0) + " stopni");
+            wprowadz_alfa_fil.innerHTML = "kąt alfa wynosi = " + alfa_wynik.toFixed(0) + " stopni";
         }
     </script>
 </head>
 <body>
-    <form>
-        Obliczanie długości drabiny oraz kątu jej nachylenia
+    Obliczenie pola oraz obwodu prostokąta.
+    <br>
+    <br>
+    <form name="formularz" action="..." onsubmit="drabina_filipowicz(this.d.value,this.x.value);
+        alfa_filipowicz(this.d.value,this.x.value);return false">
+        Podaj d=
+        <input size="6" name="d">
+        Podaj x=
+        <input size="6" name="x">
         <br>
         <br>
-        <form name="formularz" action="..." onsubmit="Drabina(this.D.value,this.X.value); Alfa(this.D.value,this.X.value);return false">
-        Podaj D = 
-        <input size="6" name="D">
-        Podaj X = 
-        <input size="6" name="X">
+        <input type="submit" value="oblicz">
         <br>
         <br>
-        <input type="submit" Value="oblicz" >
-        <br>
-        <br>
-        Drabina = 
-        <input size="6" name="drabina">
-        Alfa = 
-        <input size="6" name="alfa">
+        drabina =
+        <input size="6" name="a_dana_fil">
+        alfa =
+        <input size="6" name="b_dana_fil">
     </form>
-    <br>
-    <br>
-    <br>
-    <br>
-    <input type="button" name="przycisk" value="Filipowicz zadanie 21 kod" onclick="kod()">
-    </form>
+    <table>
+        <tr id="wprowadz_drabina_fil"></tr>
+        <tr id="wprowadz_alfa_fil"></tr>
+    </table>
 </body>
 </html>
